@@ -7,7 +7,7 @@ import { PLAYER_STATES } from "./constants/playerStates";
 
 type ControlsProps = Pick<
   Props,
-  "isLoading" | "playerState" | "onReplay"
+  "isLoading" | "mainColor" | "playerState" | "onReplay"
 > & {
   onPause: () => void;
 };
