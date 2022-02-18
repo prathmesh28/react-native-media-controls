@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import styles from "./MediaControls.style";
 import { PLAYER_STATES } from "./constants/playerStates";
-import { Controls } from "./Controls";
+import { Controls, CustomIconStyle } from "./Controls";
 import { Slider, CustomSliderStyle } from "./Slider";
 import { Toolbar } from "./Toolbar";
 
@@ -29,6 +29,7 @@ export type Props = {
   progress: number;
   showOnStart?: boolean;
   sliderStyle?: CustomSliderStyle;
+  iconStyle?: CustomIconStyle;
   toolbarStyle?: ViewStyle;
 };
 
@@ -48,6 +49,7 @@ const MediaControls = (props: Props) => {
     progress,
     showOnStart = true,
     sliderStyle, // defaults are applied in Slider.tsx
+    iconStyle,
     toolbarStyle: customToolbarStyle = {},
   } = props;
   const { initialOpacity, initialIsVisible } = (() => {
@@ -158,6 +160,7 @@ const MediaControls = (props: Props) => {
               isLoading={isLoading}
               mainColor={mainColor}
               playerState={playerState}
+              customIconStyle={iconStyle}
             />
             <Slider
               progress={progress}
