@@ -58,9 +58,7 @@ export default StyleSheet.create({
     width: 25,
   },
   thumb: {
-    backgroundColor: white,
     borderRadius: 50,
-    borderWidth: 3,
     height: 20,
     width: 20,
   },

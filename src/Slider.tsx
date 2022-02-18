@@ -81,7 +81,7 @@ const Slider = (props: Props) => {
           thumbStyle={[
             styles.thumb,
             customThumbStyle,
-            { borderColor: mainColor },
+            { backgroundColor: mainColor },
           ]}
           minimumTrackTintColor={mainColor}
         />
