@@ -7,13 +7,13 @@ import { PLAYER_STATES } from "./constants/playerStates";
 
 type ControlsProps = Pick<
   Props,
-  "isLoading" | "mainColor" | "playerState" | "onReplay"
+  "isLoading" | "playerState" | "onReplay"
 > & {
   onPause: () => void;
 };
 
 const Controls = (props: ControlsProps) => {
-  const { isLoading, mainColor, playerState, onReplay, onPause } = props;
+  const { isLoading, playerState, onReplay, onPause } = props;
   const icon = getPlayerStateIcon(playerState);
   const pressAction = playerState === PLAYER_STATES.ENDED ? onReplay : onPause;
 
