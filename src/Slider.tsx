@@ -93,8 +93,7 @@ const Slider = (props: Props) => {
           style={styles.fullScreenContainer}
           onPress={onFullScreen}
         >
-          {fullScreenIcon?fullScreenIcon: <Image source={fullScreenImage} />}
-         
+          {fullScreenIcon ? fullScreenIcon : <Image source={fullScreenImage} />}
         </TouchableOpacity>
       )}
     </View>

@@ -1,5 +1,11 @@
 import React from "react";
-import { TouchableOpacity, View, ActivityIndicator, Image, ViewStyle } from "react-native";
+import {
+  TouchableOpacity,
+  View,
+  ActivityIndicator,
+  Image,
+  ViewStyle,
+} from "react-native";
 import styles from "./MediaControls.style";
 import { getPlayerStateIcon } from "./utils";
 import { Props } from "./MediaControls";
@@ -9,23 +15,21 @@ export type CustomIconStyle = {
   customIconStyle: ViewStyle;
 };
 
-
-type ControlsProps = Pick<
-  Props,
-  "isLoading" | "playerState" | "onReplay"
-> & {
+type ControlsProps = Pick<Props, "isLoading" | "playerState" | "onReplay"> & {
   onPause: () => void;
   customIconStyle?: CustomIconStyle;
 };
 
 const Controls = (props: ControlsProps) => {
-  const { 
-    customIconStyle: CstmIconStyles = {}, 
-    isLoading, playerState, onReplay, onPause } = props;
+  const {
+    customIconStyle: CstmIconStyles = {},
+    isLoading,
+    playerState,
+    onReplay,
+    onPause,
+  } = props;
   const icon = getPlayerStateIcon(playerState);
   const pressAction = playerState === PLAYER_STATES.ENDED ? onReplay : onPause;
-
-  // const CstmIconStyles = customIconStyle || {};
 
   const content = isLoading ? (
     <ActivityIndicator size="large" color="#FFF" />
