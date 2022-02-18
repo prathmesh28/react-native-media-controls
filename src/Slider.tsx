@@ -21,6 +21,7 @@ type Props = Pick<
   | "playerState"
   | "onSeek"
   | "onSeeking"
+  | "fullScreenIcon"
 > & {
   onPause: () => void;
   customSliderStyle?: CustomSliderStyle;
@@ -30,6 +31,7 @@ const fullScreenImage = require("./assets/ic_fullscreen.png");
 
 const Slider = (props: Props) => {
   const {
+    fullScreenIcon,
     customSliderStyle,
     duration,
     mainColor,
@@ -91,7 +93,8 @@ const Slider = (props: Props) => {
           style={styles.fullScreenContainer}
           onPress={onFullScreen}
         >
-          <Image source={fullScreenImage} />
+          {fullScreenIcon?fullScreenIcon: <Image source={fullScreenImage} />}
+         
         </TouchableOpacity>
       )}
     </View>

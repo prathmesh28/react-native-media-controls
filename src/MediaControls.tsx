@@ -21,6 +21,7 @@ export type Props = {
   isLoading: boolean;
   mainColor: string;
   onFullScreen?: (event: GestureResponderEvent) => void;
+  fullScreenIcon: React.ReactNode;
   onPaused: (playerState: PLAYER_STATES) => void;
   onReplay: () => void;
   onSeek: (value: number) => void;
@@ -42,6 +43,7 @@ const MediaControls = (props: Props) => {
     isLoading = false,
     mainColor = "rgba(12, 83, 175, 0.9)",
     onFullScreen,
+    fullScreenIcon,
     onReplay: onReplayCallback,
     onSeek,
     onSeeking,
@@ -166,6 +168,7 @@ const MediaControls = (props: Props) => {
               duration={duration}
               mainColor={mainColor}
               onFullScreen={onFullScreen}
+              fullScreenIcon={fullScreenIcon}
               playerState={playerState}
               onSeek={onSeek}
               onSeeking={onSeeking}
