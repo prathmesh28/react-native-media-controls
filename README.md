@@ -56,6 +56,10 @@ const App = () => {
 };
 
 ```
+## What's different here
+- Added itemStyle prop for Pause/Play button.
+- Now you can add custom icon for fullscreen fullScreen button.
+
 ## Props
 | Prop         | Type     | Optional | Default                | Description                                                          |
 |--------------|----------|----------|------------------------|----------------------------------------------------------------------|
