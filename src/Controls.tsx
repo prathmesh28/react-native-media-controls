@@ -12,7 +12,7 @@ export type CustomIconStyle = {
 
 type ControlsProps = Pick<
   Props,
-  "isLoading" | "mainColor" | "playerState" | "onReplay"
+  "isLoading" | "playerState" | "onReplay"
 > & {
   onPause: () => void;
   customIconStyle?: CustomIconStyle;
